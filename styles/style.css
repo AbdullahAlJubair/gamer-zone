@@ -27,6 +27,10 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.section-width {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 .section-title {
     color: var(--dark-text);
     font-size: 48px;
@@ -37,6 +41,7 @@ body {
     color: var(--gray-text);
     font-size: 16px;
     font-weight: 400;
+    line-height: 25px;
 }
 .primary-btn {
     padding: 15px 40px;
@@ -151,7 +156,32 @@ nav > .logo {
     align-items: center;
 }
 
+/*Purpose Section Design*/
+.purpose {
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 13.13%, rgba(255, 66, 165, 0.03) 87.94%);
+    padding: 30px 20px;
+}
+.purpose-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 
+}
+.purpose-img > img {
+    max-width: 550px;
+}
+.purpose-content {
+    text-align: right;
+}
+.purpose-content> .section-text > small {
+    font-size: 18px;
+    font-weight: 500;
+}
+.purpose-content> .section-text > em {
+    font-size: 20px;
+    font-weight: 700;
+}
 
 
 
@@ -171,15 +201,19 @@ nav > .logo {
 /*Mobile Responsive Design*/
 @media screen and (max-width:426px) {
     nav,
-    .menu > ul {
+    .menu > ul,
+    .purpose-container {
         flex-direction: column;
         gap: 15px;
     }
     .section-title {
         font-size: 1.85rem;
     }
-    .section-text {
+    .section-text,
+    .purpose-content> .section-text > small,
+    .purpose-content> .section-text > em {
         font-size: 0.85rem;
+        line-height: 20px;
     }
     .banner {
         margin-top: 50px;
@@ -206,7 +240,8 @@ nav > .logo {
         width: 300px;
     }
     .banner-content > .section-title,
-    .banner-content > .banner-title {
+    .banner-content > .banner-title,
+    .purpose-content {
         text-align: center;
     }
     .banner-title {
@@ -221,6 +256,13 @@ nav > .logo {
         border-radius: 48px;
         font-size: .85rem;
     }
+    .purpose {
+        background: #FFF;
+        margin-top: 20px;
+    }
+    .purpose-img > img {
+        max-width: 100%;
+    }
 }
 
 
@@ -228,7 +270,8 @@ nav > .logo {
 
 /*Tablet Responsive Design*/
 @media screen and (min-width: 426px) and (max-width:768px) {
-    nav {
+    nav,
+    .purpose-container {
         flex-direction: column;
     }
     nav ul {
@@ -245,6 +288,11 @@ nav > .logo {
         background-size: 75%;
         gap: 100px;
     }
-    
+    .purpose {
+        background: #fff;
+    }
+    .purpose-content {
+        text-align: center;
+    }
     
 }
