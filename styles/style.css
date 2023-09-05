@@ -326,7 +326,7 @@ nav > .logo {
     margin-top: 50px;
 }
 .career-img img {
-    max-width: 500px;
+    max-width: 100%;
 }
 /* Category Section Design*/
 .category {
@@ -588,6 +588,12 @@ footer > .logo > h3 {
     }
     .purpose {
         background: #fff;
+    }
+    .purpose,
+    .game,
+    .online-game,
+    .online-game-2 {
+        margin-top: 20px;
     }
     .purpose-content,
     .online-game-content,
