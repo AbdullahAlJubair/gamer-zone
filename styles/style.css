@@ -400,6 +400,10 @@ footer > .logo > h3 {
 .footer-menu > .nav2 {
     font-size: 40px;
 }
+.footer-menu > .nav2 li a{
+    font-size: 40px;
+    color: var(--light-text);
+}
 .footer-menu > .nav3 li {
     color: rgba(255, 255, 255, 0.6);
 }
