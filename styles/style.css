@@ -1,3 +1,250 @@
 * {
     font-family: 'Work Sans', sans-serif;
 }
+body {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: linear-gradient(90deg, #FF42A5 13.13%, #FF42A5 87.94%);
+    --secondary-color: #4EC5F7;
+    --title-color: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    --light-text: #FFFFFF;
+    --gray-text: #534C64;
+    --dark-text:#0B0223;
+    --nav-text: #3C354F;
+}
+/*Global Design Strat*/
+.gradient-text{
+    background: var(--title-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.color-text {
+    background: var(--primary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section-title {
+    color: var(--dark-text);
+    font-size: 48px;
+    font-weight: 700;
+    margin: 5px;
+}
+.section-text {
+    color: var(--gray-text);
+    font-size: 16px;
+    font-weight: 400;
+}
+.primary-btn {
+    padding: 15px 40px;
+    border-radius: 48px;
+    background: var(--primary-color);
+    color: var(--light-text);
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+}
+.secondary-btn {
+    padding: 15px 40px;
+    border-radius: 48px;
+    background: var(--secondary-color);
+    color: var(--light-text);
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+}
+/*Global Design End*/
+
+/*Navigation Design*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+}
+nav > .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+.logo img {
+    width: 60px;
+    height: 30px;
+    object-fit: cover;
+}
+.logo h3 {
+    font-size: 40px;
+}
+.menu ul,
+.menu-btn ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu  li {
+    list-style: none;
+    margin-right: 25px;
+}
+.menu  li:last-child {
+    margin-right: 0px;
+}
+.menu li a{
+    text-decoration: none;
+}
+.menu-btn ul {
+    padding: 0;
+}
+.menu-btn{
+    border-radius: 5px;
+    background: rgba(11, 2, 35, 0.10);
+    padding: 10px 15px;
+
+}
+.menu li .section-text {
+    color: var(--nav-text);
+    font-weight: 500;
+}
+.menu-btn li:nth-child(2) a{
+    color: #F61C0D;
+}
+
+/*Banner Section Design*/
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(../images/Group-14.png);
+    background-color: #fff;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.banner-title {
+    font-size: 80px;
+    font-weight: 800;
+    margin: 5px;
+}
+.banner-content > .section-title{
+    font-weight: 600;
+}
+.banner-img img{
+    width: 500px;
+}
+.banner-content > .section-text {
+    margin: 5px;
+}
+.banner-list ul {
+    padding: 0;
+}
+.banner-list li {
+    list-style: none;
+}
+.banner-btn {
+    display: flex;
+    margin-top: 40px;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Mobile Responsive Design*/
+@media screen and (max-width:426px) {
+    nav,
+    .menu > ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .section-title {
+        font-size: 1.85rem;
+    }
+    .section-text {
+        font-size: 0.85rem;
+    }
+    .banner {
+        margin-top: 50px;
+        padding-bottom: 20px;
+        flex-direction: column-reverse;
+        background-position: bottom;
+        background-size: 100%;
+        gap: 40px;
+    }
+    nav ul {
+        padding: 0;
+    }
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+    .logo h3 {
+        font-size: 35px;
+    }
+    .banner-content {
+        width: 100%;
+    }
+    .banner-img img {
+        width: 300px;
+    }
+    .banner-content > .section-title,
+    .banner-content > .banner-title {
+        text-align: center;
+    }
+    .banner-title {
+        font-size: 3.7rem;
+    }
+    .banner-list > ul{
+        padding-left: 40px;
+    }
+    .primary-btn,
+    .secondary-btn {
+        padding: 10px 20px;
+        border-radius: 48px;
+        font-size: .85rem;
+    }
+}
+
+
+
+
+/*Tablet Responsive Design*/
+@media screen and (min-width: 426px) and (max-width:768px) {
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        padding: 0;
+    }
+    .logo img {
+        height: auto;
+    }
+    .banner {
+        margin-top: 50px;
+        padding-bottom: 20px;
+        flex-direction: column-reverse;
+        background-position: bottom;
+        background-size: 75%;
+        gap: 100px;
+    }
+    
+    
+}
