@@ -51,6 +51,7 @@ body {
     font-size: 18px;
     font-weight: 600;
     border: 0;
+    cursor: pointer;
 }
 .secondary-btn {
     padding: 15px 40px;
@@ -60,6 +61,7 @@ body {
     font-size: 18px;
     font-weight: 600;
     border: 0;
+    cursor: pointer;
 }
 /*Global Design End*/
 
@@ -78,7 +80,7 @@ nav > .logo {
     gap:10px
 }
 .logo img {
-    width: 60px;
+    width: 65px;
     height: 30px;
     object-fit: cover;
 }
@@ -242,7 +244,34 @@ nav > .logo {
     font-size: .90rem;
     line-height: 20px;
 }
-
+/*Online Game Section Design*/
+.online-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 100px;
+}
+.online-game-content {
+    width: 40%;
+    text-align: right;
+}
+.online-game-img {
+    width: 60%;
+}
+.big-game-img img {
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+}
+.small-game-img {
+    position: relative;
+    top: -150px;
+}
+.small-game-img img{
+    width: 250px;
+    height: 250px;
+}
 
 
 
@@ -259,7 +288,8 @@ nav > .logo {
 /*Mobile Responsive Design*/
 @media screen and (max-width:426px) {
     nav,
-    .purpose-container {
+    .purpose-container,
+    .online-game {
         flex-direction: column;
     }
     .menu > ul {
@@ -301,7 +331,9 @@ nav > .logo {
     }
     .banner-content > .section-title,
     .banner-content > .banner-title,
-    .purpose-content {
+    .purpose-content,
+    .online-game-content,
+    .big-game-img {
         text-align: center;
     }
     .banner-title {
@@ -316,7 +348,9 @@ nav > .logo {
         border-radius: 48px;
         font-size: .85rem;
     }
-    .purpose, .game {
+    .purpose,
+    .game,
+    .online-game {
         background: #FFF;
         margin-top: 20px;
     }
@@ -337,6 +371,26 @@ nav > .logo {
         margin: 0 auto;
         padding: 10px;
     }
+    .online-game {
+        padding: 10px;
+    }
+    .online-game-content,
+    .online-game-img {
+        width: 100%;
+    }
+    .big-game-img img {
+        max-width: 250px;
+        max-height: 250px;
+        margin-left: 40px;
+    }
+    .small-game-img {
+        top: -90px;
+    }
+    .small-game-img img {
+        width: 150px;
+        height: 150px;
+    }
+    
 }
 
 
@@ -345,7 +399,8 @@ nav > .logo {
 /*Tablet Responsive Design*/
 @media screen and (min-width: 426px) and (max-width:768px) {
     nav,
-    .purpose-container {
+    .purpose-container,
+    .online-game {
         flex-direction: column;
     }
     nav ul {
@@ -365,7 +420,9 @@ nav > .logo {
     .purpose {
         background: #fff;
     }
-    .purpose-content {
+    .purpose-content,
+    .online-game-content,
+    .big-game-img {
         text-align: center;
     }
     .game-container {
@@ -380,6 +437,13 @@ nav > .logo {
         max-width: 320px;
         margin: 0 auto;
         padding: 10px;
+    }
+    .online-game {
+        padding: 20px;
+    }
+    .online-game-content,
+    .online-game-img {
+        width: 100%;
     }
     
 }
