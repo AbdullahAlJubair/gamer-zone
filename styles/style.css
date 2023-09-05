@@ -28,7 +28,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 .section-width {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .section-title {
@@ -245,11 +245,12 @@ nav > .logo {
     line-height: 20px;
 }
 /*Online Game Section Design*/
-.online-game {
+.online-game,
+.online-game-2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     margin-top: 100px;
 }
 .online-game-content {
@@ -272,9 +273,87 @@ nav > .logo {
     width: 250px;
     height: 250px;
 }
-
-
-
+.online-game-2 .big-game-img img {
+    margin-left: 0;
+    margin-right: 100px;
+}
+.online-game-2 .small-game-img {
+    text-align: right;
+}
+/* Career Section Design */
+.career {
+    background: var(--primary-color);
+}
+.career-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+.career-content { 
+    width: 60%;
+}
+.career-img { 
+    width: 40%;
+}
+.career-content > .section-title,
+.career-content > .section-text{ 
+    color: var(--light-text);
+}
+.career-content > table.section-text {
+    margin-top: 30px;
+    font-weight: 600;
+    width: 100%;
+}
+.tName {
+    text-align: left;
+}
+.tAddress {
+    text-align: right;
+}
+.career-content > .primary-btn {
+    background: var(--light-text);
+    color: #FF42A5;
+    margin-top: 50px;
+}
+.career-img img {
+    max-width: 500px;
+}
+/* Category Section Design*/
+.category {
+    padding: 100px;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 13.13%, rgba(255, 66, 165, 0.03) 87.94%);
+}
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+.cat-box {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background: #FFF;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.cat-box:hover {
+    border: 2px solid #FF42A5;
+}
+.cat-box img {
+    width: 40px;
+    height: 40px;
+}
+.cat-box > .section-text {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.cat-box:hover > .section-text {
+    color: #FF42A5;
+}
 
 
 
@@ -289,7 +368,8 @@ nav > .logo {
 @media screen and (max-width:426px) {
     nav,
     .purpose-container,
-    .online-game {
+    .online-game,
+    .career-container {
         flex-direction: column;
     }
     .menu > ul {
@@ -350,7 +430,8 @@ nav > .logo {
     }
     .purpose,
     .game,
-    .online-game {
+    .online-game,
+    .online-game-2 {
         background: #FFF;
         margin-top: 20px;
     }
@@ -371,11 +452,14 @@ nav > .logo {
         margin: 0 auto;
         padding: 10px;
     }
-    .online-game {
+    .online-game,
+    .online-game-2 {
         padding: 10px;
     }
     .online-game-content,
-    .online-game-img {
+    .online-game-img,
+    .career-content,
+    .career-img {
         width: 100%;
     }
     .big-game-img img {
@@ -390,7 +474,26 @@ nav > .logo {
         width: 150px;
         height: 150px;
     }
-    
+    .online-game-2 {
+        flex-direction: column-reverse;
+    }
+    .career-img img {
+        max-width: 280px;
+    }
+    .category {
+        padding: 40px 10px;
+    }
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cat-box img {
+        width: 30px;
+        height: 30px;
+    }
+    .cat-box > .section-text {
+        font-size: 10px;
+        line-height: 10px;
+    }
 }
 
 
@@ -400,7 +503,8 @@ nav > .logo {
 @media screen and (min-width: 426px) and (max-width:768px) {
     nav,
     .purpose-container,
-    .online-game {
+    .online-game,
+    .career-container {
         flex-direction: column;
     }
     nav ul {
@@ -438,12 +542,21 @@ nav > .logo {
         margin: 0 auto;
         padding: 10px;
     }
-    .online-game {
+    .online-game,
+    .online-game-2 {
         padding: 20px;
     }
     .online-game-content,
     .online-game-img {
         width: 100%;
     }
-    
+    .online-game-2 {
+        flex-direction: column-reverse;
+    }
+    .category {
+        padding: 100px 50px;
+    }
+    .category-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
