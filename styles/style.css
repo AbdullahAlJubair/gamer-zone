@@ -538,11 +538,11 @@ footer > .logo > h3 {
         padding: 40px 10px;
     }
     .category-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     .cat-box img {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
     }
     .cat-box > .section-text {
         font-size: 10px;
